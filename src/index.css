@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 25% 96%;
+    --foreground: 224 33% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 33% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 33% 12%;
+    --primary: 234 89% 64%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 30% 92%;
+    --secondary-foreground: 224 33% 16%;
+    --muted: 220 25% 92%;
+    --muted-foreground: 223 16% 40%;
+    --accent: 225 88% 95%;
+    --accent-foreground: 232 70% 24%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 20% 84%;
+    --input: 220 20% 84%;
+    --ring: 234 89% 64%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 228 37% 8%;
+    --foreground: 220 20% 96%;
+    --card: 229 34% 12%;
+    --card-foreground: 220 20% 96%;
+    --popover: 229 34% 12%;
+    --popover-foreground: 220 20% 96%;
+    --primary: 236 92% 68%;
+    --primary-foreground: 231 28% 12%;
+    --secondary: 228 25% 18%;
+    --secondary-foreground: 220 20% 96%;
+    --muted: 227 22% 16%;
+    --muted-foreground: 226 17% 68%;
+    --accent: 232 34% 18%;
+    --accent-foreground: 220 20% 98%;
+    --destructive: 0 73% 54%;
+    --destructive-foreground: 220 20% 98%;
+    --border: 227 18% 22%;
+    --input: 227 18% 22%;
+    --ring: 236 92% 68%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground antialiased;
+    background-image: radial-gradient(circle at top, rgba(99, 102, 241, 0.14), transparent 32%),
+      radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.08), transparent 28%);
+    background-attachment: fixed;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+    color: hsl(var(--foreground));
+  }
+}
