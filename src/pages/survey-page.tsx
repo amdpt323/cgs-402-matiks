@@ -363,7 +363,7 @@ export default function SurveyPage() {
     } catch (error) {
       console.error("Survey submission failed:", error)
       setSubmitError(
-        "Backend fucked up. Your responses could not be submitted. Please try again."
+        "Oops Something Went Wrong ! Your responses could not be submitted. Please try again."
       )
     } finally {
       setIsSubmitting(false)
@@ -395,6 +395,11 @@ export default function SurveyPage() {
               <p className="text-sm font-medium">Signature</p>
 
               <SignaturePad value={signature} onChange={setSignature} />
+
+              <p className="text-xs text-muted-foreground">
+                Your signature is required to verify the authenticity of the response and
+                ensure that submissions are made by a real user.
+              </p>
 
               {!hasSignature && (
                 <p className="text-sm font-medium text-red-600">

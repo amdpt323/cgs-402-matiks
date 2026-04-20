@@ -1,21 +1,25 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import * as React from "react"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
-import { SiteShell } from "@/components/site-shell";
-import { ThemeProvider } from "@/components/theme-provider";
-import HomePage from "@/pages/home-page";
-import SurveyPage from "@/pages/survey-page";
+import { SiteShell } from "@/components/site-shell"
+import { ThemeProvider } from "@/components/theme-provider"
+
+const HomePage = React.lazy(() => import("@/pages/home-page"))
+const SurveyPage = React.lazy(() => import("@/pages/survey-page"))
 
 export default function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="night-survey-theme">
       <BrowserRouter>
         <SiteShell>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/survey" element={<SurveyPage />} />
-          </Routes>
+          <React.Suspense fallback={<div className="py-20 text-center">Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/survey" element={<SurveyPage />} />
+            </Routes>
+          </React.Suspense>
         </SiteShell>
       </BrowserRouter>
     </ThemeProvider>
-  );
+  )
 }

@@ -8,19 +8,24 @@
     />
     <meta
       name="description"
-      content="A React + Vite survey website with a dark night theme, theme toggle, and horizontal rating cards built with shadcn-style UI."
+      content="A Survey App crated by CGS 402 Group F students to collect data on how well matiks suits its users"
     />
     <script>
       (function () {
-        const storageKey = "night-survey-theme";
-        const storedTheme = localStorage.getItem(storageKey);
+        const storageKey = "cgs-402-survey-theme";
+        let storedTheme = null;
+
+        try {
+          storedTheme = localStorage.getItem(storageKey);
+        } catch (_) {}
+
         const theme = storedTheme === "light" ? "light" : "dark";
         const root = document.documentElement;
-        root.classList.toggle("dark", theme === "dark");
+        root.classList.toggle("light", theme === "light");
         root.style.colorScheme = theme;
       })();
     </script>
-    <title>Night Survey</title>
+    <title>Understanding Matiks</title>
   </head>
   <body>
     <div id="root"></div>

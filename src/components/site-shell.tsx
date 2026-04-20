@@ -26,7 +26,7 @@ export function SiteShell({ children }: SiteShellProps) {
             <div>
               <p className="text-sm font-semibold tracking-wide">CGS402 - Applied Cognitive Science (IITK) </p>
               <p className="text-xs text-muted-foreground">
-                Group G (2025-26 | Sem-II)
+                Group F (2025-26 | Sem-II)
               </p>
             </div>
           </Link>
