@@ -9,7 +9,7 @@ const SurveyPage = React.lazy(() => import("@/pages/survey-page"))
 
 export default function App() {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="night-survey-theme">
+    <ThemeProvider defaultTheme="light" storageKey="cgs-402-survey-theme">
       <BrowserRouter>
         <SiteShell>
           <React.Suspense fallback={<div className="py-20 text-center">Loading...</div>}>
