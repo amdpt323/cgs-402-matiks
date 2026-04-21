@@ -34,7 +34,7 @@ function getFeedbackLabel(value?: string) {
   const score = Number(value);
 
   if (!value) {
-    return "Choose a number from 1 to 10 to show how strongly you feel about this part of your Matiks experience.";
+    return "Choose a number from 1 to 10 to show how strongly you feel about this part of your Coursera experience.";
   }
   if (score <= 2) return "Very low score — confusing or frustrating.";
   if (score <= 4) return "Low score — needs improvement.";

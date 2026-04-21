@@ -48,26 +48,26 @@ const highlights = [
     icon: Brain,
     title: "Learning science focused",
     description:
-      "Evaluate whether Matiks supports memory, recall, repetition, and long-term retention instead of only feeling entertaining.",
+      "Evaluate whether Coursera supports understanding, recall, reflection, and long-term retention instead of only delivering content.",
   },
   {
     icon: Gauge,
     title: "Usability + engagement",
     description:
-      "Measure how the app feels in practice through usability, trust, motivation, challenge level, and overall ease of use.",
+      "Measure how the platform feels in practice through usability, trust, motivation, clarity, and overall ease of learning.",
   },
   {
     icon: Target,
     title: "Structured final outcome",
     description:
-      "The survey ends with an overall recommendation-style question so users can express their final impression clearly.",
+      "The survey ends with an overall recommendation-style question so learners can clearly express their final impression.",
   },
 ];
 
 const surveyBlocks = [
-  "Memory & encoding",
-  "Spacing & repetition",
-  "Retrieval practice",
+  "Memory & understanding",
+  "Revision & revisiting concepts",
+  "Retrieval through quizzes",
   "Feedback & error correction",
   "Long-term retention",
   "Nielsen usability principles",
@@ -78,7 +78,7 @@ const surveyBlocks = [
 const agreements = [
   {
     title: "Informed participation",
-    text: "This survey is meant to collect honest opinions about the Matiks app experience from a learner’s point of view.",
+    text: "This survey is meant to collect honest opinions about the Coursera learning experience from a learner’s point of view.",
   },
   {
     title: "Response flexibility",
@@ -86,28 +86,28 @@ const agreements = [
   },
   {
     title: "Research-style framing",
-    text: "The questions focus on both learning effectiveness and user experience, not only on visuals or first impressions.",
+    text: "The questions focus on both learning effectiveness and user experience, not only on visual design or first impressions.",
   },
 ];
 
-const matiksPoints = [
+const courseraPoints = [
   {
     icon: Zap,
-    title: "Fast and interactive practice",
+    title: "Flexible online learning",
     description:
-      "Matiks is treated here as a quick, challenge-driven learning experience where users solve and respond actively instead of consuming content passively.",
+      "Coursera is treated here as a structured digital learning platform where users learn through videos, quizzes, assignments, and guided course progression.",
   },
   {
     icon: Trophy,
-    title: "Gamified motivation",
+    title: "Achievement and progress",
     description:
-      "The survey studies whether game-like challenge, achievement, and competition make the learning experience more engaging and rewarding.",
+      "The survey studies whether certificates, deadlines, graded work, and visible progress make the learning experience more engaging and meaningful.",
   },
   {
     icon: BrainCircuit,
     title: "Learning impact",
     description:
-      "Participants are asked to reflect on whether Matiks actually helps them think better, remember patterns, improve confidence, and stay motivated.",
+      "Participants are asked to reflect on whether Coursera actually helps them understand concepts better, remember material, build confidence, and stay motivated.",
   },
 ];
 
@@ -146,9 +146,9 @@ export default function HomePage() {
           <Card className="overflow-hidden border-border/60 bg-card/70 backdrop-blur-xl">
             <CardHeader className="space-y-6 pb-6">
               <div className="flex flex-wrap gap-2">
-                <Badge className="rounded-full px-4 py-1">Matiks App Survey</Badge>
+                <Badge className="rounded-full px-4 py-1">Coursera Platform Survey</Badge>
                 <Badge variant="secondary" className="rounded-full px-4 py-1">
-                  Gamified Learning
+                  Online Learning Experience
                 </Badge>
               </div>
 
@@ -159,13 +159,13 @@ export default function HomePage() {
                 </div>
 
                 <CardTitle className="max-w-4xl text-4xl leading-tight md:text-5xl xl:text-6xl">
-                  Evaluate how well Matiks turns learning into an engaging and effective experience.
+                  Evaluate how well Coursera supports learning in an effective and engaging way.
                 </CardTitle>
 
                 <CardDescription className="max-w-2xl text-base leading-7 md:text-lg">
-                  This survey explores the Matiks experience through learning effectiveness,
+                  This survey explores the Coursera experience through learning effectiveness,
                   usability, motivation, feedback, and long-term engagement. It is designed
-                  to move beyond surface-level design and ask whether the product actually
+                  to move beyond surface-level design and ask whether the platform actually
                   helps people learn in a meaningful way.
                 </CardDescription>
               </div>
@@ -209,7 +209,7 @@ export default function HomePage() {
                 </Button>
 
                 <Button asChild variant="outline" size="lg" className="rounded-2xl px-6">
-                  <a href="#matiks">About Matiks</a>
+                  <a href="#coursera">About Coursera</a>
                 </Button>
               </div>
             </CardContent>
@@ -235,8 +235,8 @@ export default function HomePage() {
                 </p>
                 <h3 className="mt-2 text-lg font-semibold">Understand the purpose</h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  The homepage introduces Matiks, explains the aim of the study,
-                  and shows what dimensions of the user experience are being evaluated.
+                  The homepage introduces Coursera, explains the aim of the study,
+                  and shows which dimensions of the learning experience are being evaluated.
                 </p>
               </div>
 
@@ -246,14 +246,14 @@ export default function HomePage() {
                 </p>
                 <h3 className="mt-2 text-lg font-semibold">Respond section by section</h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  Users enter the questionnaire and rate how Matiks performs across
+                  Users enter the questionnaire and rate how Coursera performs across
                   learning effectiveness, usability, motivation, barriers, and recommendation intent.
                 </p>
               </div>
 
               <div className="rounded-[1.25rem] border border-dashed border-primary/30 bg-primary/5 p-4">
                 <p className="text-sm leading-6 text-muted-foreground">
-                  Best suited for participants who have used Matiks and can reflect on its
+                  Best suited for participants who have used Coursera and can reflect on its
                   learning value as well as its overall experience.
                 </p>
               </div>
@@ -262,19 +262,19 @@ export default function HomePage() {
         </Reveal>
       </section>
 
-      {/* MATIKS SECTION */}
-      <section id="matiks" className="space-y-8">
+      {/* COURSERA SECTION */}
+      <section id="coursera" className="space-y-8">
         <Reveal className="space-y-3">
           <Badge variant="outline" className="rounded-full px-4 py-1">
-            About Matiks
+            About Coursera
           </Badge>
           <h2 className="text-3xl font-semibold md:text-4xl">
-            Why this survey focuses on Matiks
+            Why this survey focuses on Coursera
           </h2>
           <p className="max-w-3xl leading-7 text-muted-foreground">
-            This survey is centered on the Matiks app and its learning experience.
-            The goal is to understand whether Matiks feels engaging, usable, motivating,
-            and genuinely helpful for users while they learn and practice.
+            This survey is centered on the Coursera platform and its learning experience.
+            The goal is to understand whether Coursera feels useful, usable, motivating,
+            and genuinely supportive for learners while they study and practice.
           </p>
         </Reveal>
 
@@ -284,19 +284,19 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle className="text-2xl">What participants should keep in mind</CardTitle>
                 <CardDescription>
-                  Answer based on your real experience of using Matiks.
+                  Answer based on your real experience of using Coursera.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4 text-sm leading-7 text-muted-foreground">
                 <p>
-                  While answering, think about whether Matiks helps you stay engaged,
-                  solve problems actively, remember concepts or patterns, recover from
+                  While answering, think about whether Coursera helps you understand concepts,
+                  stay engaged with course material, remember important ideas, recover from
                   mistakes, and feel motivated to continue learning.
                 </p>
                 <p>
-                  Since Matiks mixes learning with game-like interaction, this survey
-                  also explores whether that approach improves the experience or creates
-                  pressure, confusion, or friction for the user.
+                  Since Coursera combines structured online teaching with quizzes, assignments,
+                  deadlines, and progress tracking, this survey also explores whether that approach
+                  improves the experience or creates pressure, confusion, or friction for the learner.
                 </p>
               </CardContent>
             </Card>
@@ -309,7 +309,7 @@ export default function HomePage() {
             whileInView="show"
             viewport={{ once: true, amount: 0.15 }}
           >
-            {matiksPoints.map((item) => {
+            {courseraPoints.map((item) => {
               const Icon = item.icon;
 
               return (
@@ -345,9 +345,9 @@ export default function HomePage() {
             A broader look at learning, usability, and real user friction
           </h2>
           <p className="max-w-3xl text-muted-foreground leading-7">
-            Instead of asking only whether an app looks good or feels fun, this survey
-            checks whether it helps users remember content, recover from mistakes,
-            maintain motivation, and trust the platform over time.
+            Instead of asking only whether a platform looks good or feels convenient, this survey
+            checks whether it helps learners remember content, recover from mistakes,
+            maintain motivation, and trust the learning process over time.
           </p>
         </Reveal>
 
@@ -383,17 +383,17 @@ export default function HomePage() {
             <CardHeader>
               <CardTitle className="text-2xl">Why this study matters</CardTitle>
               <CardDescription>
-                Educational apps do more than deliver screens. They shape how people learn.
+                Digital learning platforms do more than deliver lessons. They shape how people learn.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4 text-sm leading-7 text-muted-foreground">
               <p>
-                A learning product may be visually polished and still fail to support
+                A learning platform may be polished and content-rich, yet still fail to support
                 memory, reflection, confidence, and long-term engagement.
               </p>
               <p>
                 This survey tries to capture that wider picture by combining learning-related
-                ideas with usability thinking and real-world problems users may face while studying.
+                ideas with usability thinking and real-world problems learners may face while studying.
               </p>
             </CardContent>
           </Card>
@@ -408,8 +408,8 @@ export default function HomePage() {
               <div className="rounded-[1.25rem] border border-border/60 bg-background/40 p-4">
                 <h3 className="font-semibold">Focused questions</h3>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  Each response should reflect actual use of Matiks rather than random guessing
-                  or general app preference.
+                  Each response should reflect actual use of Coursera rather than random guessing
+                  or general preference about online learning apps.
                 </p>
               </div>
 
@@ -442,7 +442,7 @@ export default function HomePage() {
             Before entering the questionnaire
           </h2>
           <p className="max-w-2xl text-muted-foreground leading-7">
-            Please answer honestly based on your own experience with Matiks and review your
+            Please answer honestly based on your own experience with Coursera and review your
             responses before submitting.
           </p>
         </Reveal>
@@ -486,9 +486,9 @@ export default function HomePage() {
                   <h3 className="text-xl font-semibold">Quick participation summary</h3>
                   <Separator />
                   <ul className="space-y-3 text-sm leading-6 text-muted-foreground">
-                    <li>• Answer based on your actual experience with Matiks.</li>
+                    <li>• Answer based on your actual experience with Coursera.</li>
                     <li>• Review your responses before final submission.</li>
-                    <li>• Continue only when you are ready to rate the full experience.</li>
+                    <li>• Continue only when you are ready to rate the full learning experience.</li>
                   </ul>
                 </div>
 
