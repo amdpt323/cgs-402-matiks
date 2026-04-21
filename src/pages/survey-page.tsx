@@ -108,7 +108,6 @@ const surveyQuestions: SurveyQuestion[] = [
     title: "Purpose of use",
     prompt: "Why do you use Coursera?",
     type: "single_choice",
-    helper: "Select all that apply.",
     options: [
       { label: "Skill learning", value: "skill_learning" },
       { label: "College studies", value: "college_studies" },
