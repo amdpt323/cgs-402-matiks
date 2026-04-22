@@ -1353,7 +1353,7 @@ function QuestionMiniChart({ question }: { question: AggregatedQuestion }) {
           <h4 className='font-semibold'>Open-ended responses</h4>
         </div>
 
-        <div className="relative h-64 overflow-hidden">
+        <div className="relative max-h-56 sm:max-h-64 overflow-hidden">
           <div className="flex flex-col gap-3 animate-scroll">
             {[...thoughts, ...thoughts].map((thought, index) => (
               <div
@@ -1410,7 +1410,7 @@ function QuestionMiniChart({ question }: { question: AggregatedQuestion }) {
   }
 
   return (
-    <div className='h-72 rounded-3xl border border-border/60 bg-background/40 p-4'>
+    <div className='h-56 sm:h-64 lg:h-72 rounded-3xl border border-border/60 bg-background/40 p-4'>
       <Bar data={data} options={barOptions} />
     </div>
   )
@@ -1433,7 +1433,7 @@ function QuestionResultCard({
     <motion.div variants={fadeUp}>
       <Card className='overflow-hidden border-border/60 bg-card/70 backdrop-blur-md'>
         <CardHeader className='space-y-4'>
-          <div className='flex flex-wrap items-center justify-between gap-3'>
+          <div className='flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between'>
             <div className='flex flex-wrap items-center gap-3'>
               <Badge variant='outline' className='rounded-full px-4 py-1'>
                 {question.label}
@@ -1458,12 +1458,11 @@ function QuestionResultCard({
           </div>
         </CardHeader>
 
-        <CardContent className='space-y-6'>
-          <div className='grid gap-6 lg:grid-cols-[0.95fr_1.05fr]'>
-            <QuestionMiniChart question={question} />
+        <CardContent className='space-y-4 sm:space-y-6 p-4 sm:p-6'>
+          <div className='flex flex-col gap-6 xl:grid xl:grid-cols-[0.95fr_1.05fr]'>
 
-            <div className='space-y-4'>
-              <div className='rounded-3xl border border-primary/20 bg-primary/5 p-5'>
+            <div className='space-y-4 order-1 xl:order-2'>
+              <div className='rounded-2xl border border-primary/20 bg-primary/5 p-4 sm:p-5'>
                 <div className='mb-3 flex items-center gap-2 text-primary'>
                   <Sparkles className='size-5' />
                   <h4 className='font-semibold'>Expected insight</h4>
@@ -1535,6 +1534,10 @@ function QuestionResultCard({
                   </h4>
                 </div>
               )}
+            </div>
+
+            <div className='order-2 xl:order-1'>
+              <QuestionMiniChart question={question} />
             </div>
           </div>
         </CardContent>
