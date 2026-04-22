@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 const HomePage = React.lazy(() => import("@/pages/home-page"))
 const SurveyPage = React.lazy(() => import("@/pages/survey-page"))
+const ResultPage = React.lazy(() => import("@/pages/result-page"))
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/survey" element={<SurveyPage />} />
+              <Route path="/kaboom" element={<ResultPage/>} />
             </Routes>
           </React.Suspense>
         </SiteShell>
