@@ -1915,7 +1915,7 @@ export default function ResultPage() {
 
       <SignatureMovingPanel signatures={signatures} />
 
-      <section className='space-y-8'>
+      <section className='space-y-8 hidden xl:block'>
         <Reveal className='space-y-3'>
           <Badge variant='outline' className='rounded-full px-4 py-1'>
             Question-by-question insights
